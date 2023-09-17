@@ -21,12 +21,27 @@ cd ..
 cd src-tauri
 rm tauri.conf.json
 cd ..
-cd ..
-cd ..
-cp tauri.conf.json $PWD/builder/src-tauri
-cd $PWD/builder/$appname
-npm run tauri build
+rm -r target
 wait
+cd ..
+wait
+cd ..
+wait
+echo $PWD
+cp $PWD/tauri.conf.json $PWD/builder/$appname/src-tauri/tauri.conf.json
+wait
+cd $PWD/builder/$appname
+cd src-tauri
+cargo install tauri-cli
+wait
+cd ..
+cargo tauri build
+wait
+cp $PWD/src-tauri/target/release/twebpage ../..
+wait
+cd ../..
+mv twebpage $appname
+
 
 
 
