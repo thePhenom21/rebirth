@@ -1,5 +1,5 @@
 # Rebirth
-An script that lets you create desktop apps of your favourite websites.
+A script that lets you create desktop apps of your favourite websites.
 
 # Dependencies
 - Rust (1.72 or later)
