@@ -14,11 +14,11 @@ echo $parsed_name
 
 mkdir builder
 cd $PWD/builder
-npm create tauri-app@latest -- $appname -y 
+cargo install create-tauri-app --locked
+wait
+cargo create-tauri-app $appname -y
 wait
 cd $appname
-npm install 
-wait
 rm -r src
 mkdir src
 cd src
