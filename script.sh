@@ -19,8 +19,9 @@ wait
 cd $appname
 npm install 
 wait
+rm -r src
+mkdir src
 cd src
-rm -r *
 echo "<meta http-equiv=\"Refresh\" content=\"0; url='$url'\" />" >> index.html
 cd ..
 cd src-tauri
