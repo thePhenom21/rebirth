@@ -9,6 +9,8 @@ done
 
 mkdir builder
 cd $PWD/builder
+cargo install create-tauri-app --locked
+wait
 cargo create-tauri-app -y $appname
 wait
 cd $appname
@@ -41,6 +43,9 @@ cp $PWD/src-tauri/target/release/twebpage ../..
 wait
 cd ../..
 mv twebpage $appname
+rm -r builder
+clear
+echo Done!
 
 
 
